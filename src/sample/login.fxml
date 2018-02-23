@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #b6e3ff;" GridPane.columnIndex="1">
+         <children>
+            <Pane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #82b1ff;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="68.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/realvista_realestate_school_256.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="22.0" layoutY="212.0" prefHeight="28.0" prefWidth="258.0" text="School Management System" textAlignment="JUSTIFY" textFill="#df00ebf5" textOverrun="CLIP">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="16.0" layoutY="358.0" prefHeight="30.0" prefWidth="206.0" text=" @CoppyRight by RinNasrin" textFill="#ee0000">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <JFXTextField layoutX="404.0" layoutY="95.0" prefHeight="37.0" prefWidth="185.0" text="Username" unFocusColor="#4200dd">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField focusColor="#060dd3" layoutX="404.0" layoutY="181.0" prefHeight="30.0" prefWidth="174.0" text="Password" unFocusColor="#8109c6">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXTextField>
+            <ImageView fitHeight="58.0" fitWidth="73.0" layoutX="322.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Wikipedia_User-ICON_byNightsight.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="58.0" fitWidth="58.0" layoutX="319.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/105358-3d-glossy-orange-orb-icon-business-lock5.png" />
+               </image>
+            </ImageView>
+            <JFXButton buttonType="RAISED" layoutX="504.0" layoutY="249.0" prefHeight="44.0" prefWidth="82.0" text="Login" textAlignment="JUSTIFY" textFill="#f2570a">
+               <font>
+                  <Font name="Andalus" size="17.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="317.0" layoutY="355.0" prefHeight="44.0" prefWidth="82.0" text="DB Staus" textFill="#eb0000">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="351.0" layoutY="33.0" prefHeight="17.0" prefWidth="225.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
