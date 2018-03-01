@@ -84,9 +84,4 @@ public class Controller implements Initializable{
     }//adminDashboard
 
 
-    private class JFXTextField {
-    }
-
-    private class JFXPasswordField {
-    }
 }//class
