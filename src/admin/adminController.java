@@ -252,7 +252,11 @@ public class adminController implements Initializable {
 
     }//logOut
 
+    public JFXButton getBtnLoad() {
+        return btnLoad;
+    }
 
-
-
+    public void setBtnLoad(JFXButton btnLoad) {
+        this.btnLoad = btnLoad;
+    }
 }//class
