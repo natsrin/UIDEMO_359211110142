@@ -1,7 +1,6 @@
 package sample;
 
 import admin.adminController;
-
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -20,7 +19,7 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable{
-    private loginModel loginModel = new loginModel();
+    private loginModel loginmodel = new loginModel();
 
     @FXML
     private JFXTextField username;
@@ -40,27 +39,29 @@ public class Controller implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        if (this.loginModel.isDatabaseConnection()) {
+        if (this.loginmodel.isDatabaseConnection()) {
             this.dbStatus.setText("Connected to DB.");
-        }else {
+        } else {
             this.dbStatus.setText("Not Connect to DB.");
         }
     }//initialize
 
     @FXML
-    public void Login(ActionEvent event) {
+    public void Login(ActionEvent event){
         try {
-            if (this.loginModel.isLogin(username.getText(),password.getText())){
+            if (this.loginmodel.isLogin(username.getText(), password.getText())) {
                 Stage stage = (Stage) this.btnLogin.getScene().getWindow();
                 stage.close();
                 adminDashboard();
 
-            }else {
-                loginStatus.setText("Your username or password is invalid");
+            } else {
+                loginStatus.setText("Your username or password is invalid.");
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
     }//Login
 
     private void adminDashboard() {
@@ -78,6 +79,14 @@ public class Controller implements Initializable{
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
     }//adminDashboard
 
+
+    private class JFXTextField {
+    }
+
+    private class JFXPasswordField {
+    }
 }//class

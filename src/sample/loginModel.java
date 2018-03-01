@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class loginModel {
+
     Connection connection;
 
     public loginModel() {
@@ -16,14 +17,16 @@ public class loginModel {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        if (this.connection == null){
+
+        if (this.connection == null) {
             System.exit(1);
         }
     }//loginModel
     public boolean isDatabaseConnection(){
         return this.connection != null;
     }//isDatabaseConnection
-    public boolean isLogin(String user,String pass) throws SQLException {
+
+    public boolean isLogin(String user, String pass) throws SQLException {
         PreparedStatement pr = null;
         ResultSet rs = null;
 
@@ -31,7 +34,7 @@ public class loginModel {
         try {
             pr = this.connection.prepareStatement(sql);
             pr.setString(1,user);
-            pr.setString(2,pass);
+            pr.setString(2, pass);
             rs = pr.executeQuery();
 
             if (rs.next()) {
@@ -45,6 +48,7 @@ public class loginModel {
             pr.close();
             rs.close();
         }
+
 
     }//isLogin
 }//class
